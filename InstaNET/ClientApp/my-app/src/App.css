@@ -1,0 +1,300 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Login{
+  position: absolute;
+  right: 25%;
+  top:10%;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  z-index: 10;
+  border: 0.1px solid;
+}
+
+.field{
+  width: 325px;
+  background-color: RGB(240, 244, 247);
+  border: 0.1px solid;
+  height: 18px;
+  padding: 10px;
+  margin: 10px ;
+}
+
+.forgotpw {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.statusBar{
+  position: absolute;
+  top:10px;
+  left:80px;
+  right: 10%;
+  overflow: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;  /* IE and Edge * to hide the scrollbar*/   
+  scrollbar-width: none; /* firefox * to hide the scrollbar*/   
+}
+.statusBar::-webkit-scrollbar {
+  display: none;
+}
+.noscrollBarWithScroll{
+  overflow-y:scroll;
+}
+.noscrollBarWithScroll::-webkit-scrollbar {
+  display: none;
+}
+.statusInd{
+  margin: 10px;
+    height: 70px;
+    width: 70px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+.statusDiv{
+  position: relative;
+  display: inline-block;
+}
+
+.Main-Body{
+  padding-top: 120px;
+  margin: auto;
+  width: 500px;
+}
+
+.Post{
+  min-width: 500px;
+  min-height: 200px;
+  border: 1px outset rgb(4, 4, 4);
+  margin-top:10px ;
+  z-index: 10;
+}
+.post-body-profile{
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding:5px;
+}
+.profile-pic{
+  width: 30px;
+  height: 32px;
+  border-radius: 50%;
+}
+.post-body-mainimg{
+  width:500px;
+  height: 280px;
+}
+.post-body span{
+  display: block;
+  padding-top: 3px;
+  padding-left: 5px;
+}
+.post-body input{
+  padding-top: 3px;
+  padding-left: 5px;
+  height: 30px;
+  width: 400px;
+  border: none;
+  background-color: #000000;
+  color: whitesmoke;
+}
+.post-body input:focus{
+  outline: none;
+  font-weight:bold;
+}
+.LikePost label{
+  font-size: 22px;
+  padding: 3px;
+}
+.ActionsBar{
+  position: fixed;
+  left:1px;
+  border: 1px solid black;
+  width:60px;
+}
+.Action-item{
+  width:60px;
+  border-bottom: 1px solid;
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:20px;
+  z-index: 100;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* popup  css */
+.mymodal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  position: fixed;
+  margin: auto;
+  background-color: #000000;
+  padding: 20px;
+  border: 1px solid #888;
+  top: 15%;
+  left:10%;
+  max-width: fit-content;
+  z-index: 2;
+}
+body.modal-content{
+  overflow-y: hidden;
+}
+/* popup  css */
+
+.result{
+  display: block;
+  padding: 3px;
+  clear: both;
+}
+
+.Heart{
+  position: absolute;
+  font-size: 100px;
+  left: 50%;top:30%;
+  transform: translate(-50%, 0);
+  visibility: hidden;
+  animation-name: example;
+  animation-duration: 0.9s;
+}
+
+@keyframes example {
+  25%  {visibility: visible;}
+}
+.Inactive{
+  border-top: 0px solid;
+}
+.active{
+  border-top: 1px solid;
+
+}
+.Empty-posts{
+  position: relative;
+  top: 100px;
+  left: 5%;
+  font-size: 40px;
+  text-align: center;
+}
+.center-content{
+  position: fixed;
+  margin: auto;
+  background-color: #000000;
+  padding: 20px;
+  border: 1px solid #888;
+  top: 15%;
+  left:30%;
+  max-height: 400px;
+  z-index: 2;
+}
+.chat-content{
+  position: fixed;
+  margin: auto;
+  background-color: #000000;
+  padding: 20px;
+  border: 1px solid #888;
+  top: 15%;
+  left:30%;
+  height: 360px;
+  width: 380px;
+  z-index: 2;
+}
+.list-content{
+  position: fixed;
+  margin: auto;
+  background-color: #000000;
+  padding: 20px;
+  border: 1px solid #888;
+  top: 15%;
+  left:35%;
+  height: fit-content;
+  min-width: 200px;
+  max-width: 500px;
+  text-align: center;
+  z-index: 2;
+}
+.scroll-area{
+  overflow-y: scroll;
+  height: 300px; /* //mandatory */
+}
+.scroll-area::-webkit-scrollbar {
+  display: none;
+}
+.slider-content{
+  position: fixed;
+  margin: auto;
+  background-color: #000000;
+  padding: 20px;
+  border: 1px solid #888;
+  top: 10px;
+  left:16%;
+  max-height: fit-content;
+  max-width: 800px;
+  text-align: center;
+  z-index: 100;
+}
+.show-box{
+  position: fixed;
+  right: 10%;
+  top:15%;
+  text-align: center;
+  width: fit-content;
+  z-index: 20;
+  padding: 15px 30px 15px 15px;
+  border-radius: 10px;
+  border: 2px solid rgb(227, 169, 180);
+  background-color: rgb(255, 255, 255,0.3);
+}
+.loading{
+  background: url(https://media.licdn.com/dms/image/C5612AQGQsIU7Wu56iQ/article-cover_image-shrink_720_1280/0/1592730529839?e=2147483647&v=beta&t=gLTkwVcBJXzr5sxrNz002tjwC4R1W1hrPjqYceHOuK0) no-repeat center center fixed;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
